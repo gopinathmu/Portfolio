@@ -1,0 +1,153 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.4s ease;
+}
+
+:root {
+    --body-color: #f0f1f3;
+    --nav-color: #f0f1f3;
+    --side-nav: #ffffff;
+    --text-color: #000000;
+    --icon-color: rgb(0, 0, 0);
+}
+
+body {
+    background-color: var(--body-color);
+}
+
+.nav-darkbar {
+    display: flex;
+    gap: 10px;
+}
+
+.darkLight {
+    font-size: 25px;
+    color: var(--icon-color);
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    background-color: var(--nav-color);
+    z-index: 100;
+}
+
+.nav-bar .nav-links {
+    display: none;
+}
+
+nav .nav-bar {
+    height: 100%;
+    max-width: 1500px;
+    width: 100%;
+    background-color: var(--nav-color);
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-nav a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+
+nav .nav-bar .sidebarOpen {
+    color: var(--text-color);
+    font-size: 35px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.nav-bar .nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar .nav-links li {
+    margin: 0 5px;
+    list-style: none;
+}
+
+.nav-links li {
+    position: relative;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 30px;
+}
+
+.nav-links li:hover {
+    color: green;
+}
+
+.menu {
+    position: fixed;
+    height: 100%;
+    width: 320px;
+    left: -100%;
+    top: 0;
+    padding: 20px;
+    background-color: var(--side-nav);
+    z-index: 100;
+    transition: all 0.4s ease;
+}
+
+nav.active .menu {
+    left: -0%;
+}
+
+.logo-toggle .siderbarClose {
+    color: var(--text-color);
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.nav-bar .nav-links {
+    flex-direction: column;
+    padding-top: 30px;
+}
+
+.nav-links li a {
+    display: block;
+    margin-top: 20px;
+}
+
+@media (max-width: 1000px) {
+    nav .nav-bar .sidebarOpen {
+        display: block;
+        font-size: 30px;
+        padding: 8px;
+    }
+
+    nav.active .nav-bar .navLogo a {
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+
+    .darkLight {
+        font-size: 20px;
+        margin-top: 11px;
+    }
+
+    .logo-nav a {
+        font-size: 20px;
+    }
+}

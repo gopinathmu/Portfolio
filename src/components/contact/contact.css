@@ -1,0 +1,56 @@
+:root {
+  --body-color: #f0f1f3;
+  --nav-color: #f0f1f3;
+  --side-nav: #ffffff;
+  --text-color: #000000;
+  --icon-color: rgb(0, 0, 0);
+}
+
+body.dark {
+  --body-color: #313233;
+  --nav-color: #313233;
+  --side-nav: #181818;
+  --text-color: #CCC;
+  --icon-color: white;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 105px;
+  background-color: rgb(35, 34, 34);
+  color: rgb(253, 250, 250);
+  padding: 100px;
+}
+
+.i {
+  display: flex;
+  font-size: 25px;
+  gap: 30px;
+  color: var(--text-color);
+}
+
+.i a {
+  color: rgb(253, 250, 250);
+  font-size: 25px;
+}
+
+@media only screen and (max-width: 790px) {
+  .contact {
+    height: 50vh;
+    padding-left: 210px;
+    padding-right: 210px;
+    margin-top: 200px;
+  }
+  .contact h1 {
+    width: 200px;
+    text-align: center;
+  }
+  .cp {
+    width: 300px;
+    text-align: center;
+  }
+}
