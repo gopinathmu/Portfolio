@@ -1,8 +1,7 @@
 import React from 'react';
-import image from "../assestss/gopinath.jpg";
+import image from "../assestss/gopi.jpg"; 
 import "./home.css";
 import { Element } from 'react-scroll';
-import { Link } from "react-router-dom";
 import { Link as ScrollLink } from 'react-scroll';
 import { Github, Linkedin } from "react-bootstrap-icons";
 
@@ -11,7 +10,7 @@ const Home = () => {
     <Element name="home">
       <section id='home'>
         <div className='homeImage'>
-          <img src={image} alt='' className='image' />
+          <img src={image} alt='Gopinath' className='image' />
         </div>
       
         <div className='home-content'>
@@ -25,8 +24,12 @@ const Home = () => {
             More <span>About Me</span>
           </ScrollLink>
           <div className='home-i'>
-            <Link to="https://www.linkedin.com/in/gopinath-chinnadurai/" target="_blank"><Linkedin /></Link>
-            <Link to="https://github.com/gopinathmu" target="_blank"><Github /></Link>
+            <a href="https://www.linkedin.com/in/gopinath-chinnadurai/" target="_blank" rel="noopener noreferrer">
+              <Linkedin />
+            </a>
+            <a href="https://github.com/gopinathmu" target="_blank" rel="noopener noreferrer">
+              <Github />
+            </a>
           </div>
         </div>
       </section>
@@ -35,4 +38,3 @@ const Home = () => {
 };
 
 export default Home;
-
